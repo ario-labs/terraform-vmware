@@ -1,6 +1,3 @@
-# Local .terraform directories
-**/.terraform/*
-
 # Terraform lockfile
 .terraform.lock.hcl
 
