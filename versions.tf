@@ -1,11 +1,11 @@
 terraform {
   required_providers {
     cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = "4.35.0"
+      source  = "registry.terraform.io/cloudflare/cloudflare"
+      version = "4.36.0"
     }
     vsphere = {
-      source  = "hashicorp/vsphere"
+      source  = "registry.terraform.io/hashicorp/vsphere"
       version = "2.8.1"
     }
   }
