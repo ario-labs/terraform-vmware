@@ -1,0 +1,16 @@
+{
+  "archives": {
+    "darwin_arm64": {
+      "hashes": [
+        "h1:zjzavjIdLDGRYsWd3v0HJz6ul12Cewj9RW/cqAQ4DxI="
+      ],
+      "url": "terraform-provider-cloudflare_4.36.0_darwin_arm64.zip"
+    },
+    "linux_amd64": {
+      "hashes": [
+        "h1:Xx6WUD/zB8fM9SjkFx06Fgx2K7aGJIVvsJS2pwqALEM="
+      ],
+      "url": "terraform-provider-cloudflare_4.36.0_linux_amd64.zip"
+    }
+  }
+}
