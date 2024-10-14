@@ -54,7 +54,7 @@ resource "vsphere_virtual_machine" "vm" {
         for_each = local.is_windows_template ? [1] : []
         content {
           computer_name = var.name
-          time_zone     = var.time_zone != null ? var.time_zone : null
+          time_zone     = var.time_zone
         }
       }
       dynamic "linux_options" {
@@ -62,14 +62,14 @@ resource "vsphere_virtual_machine" "vm" {
         content {
           host_name = var.name
           domain    = ""
-          time_zone = var.time_zone != null ? var.time_zone : null
+          time_zone = var.time_zone
         }
       }
-      dns_server_list = var.dns_server_list != null ? var.dns_server_list : null
+      dns_server_list = var.dns_server_list
       network_interface {
         ipv4_address    = split("/", var.ipv4_with_cidr)[0]
         ipv4_netmask    = split("/", var.ipv4_with_cidr)[1]
-        dns_server_list = var.dns_server_list != null ? var.dns_server_list : null
+        dns_server_list = var.dns_server_list
       }
       ipv4_gateway = cidrhost(var.ipv4_with_cidr, 1)
     }

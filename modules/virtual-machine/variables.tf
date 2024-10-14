@@ -16,7 +16,7 @@ variable "datastore" {
 variable "dns_server_list" {
   description = "The DNS servers to use"
   type        = list(string)
-  nullable    = true
+  default     = []
 }
 
 variable "cluster" {
@@ -52,7 +52,7 @@ variable "template" {
 variable "time_zone" {
   description = "The time zone to use"
   type        = string
-  nullable    = true
+  default     = "UTC"
 }
 
 variable "linked_clone" {
