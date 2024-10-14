@@ -13,6 +13,11 @@ variable "datastore" {
   type        = string
 }
 
+variable "dns_server_list" {
+  description = "The DNS servers to use"
+  type        = optional(list(string))
+}
+
 variable "cluster" {
   description = "The cluster to use"
   type        = string
@@ -41,6 +46,11 @@ variable "folder" {
 variable "template" {
   description = "The template to clone"
   type        = string
+}
+
+variable "time_zone" {
+  description = "The time zone to use"
+  type        = optional(string)
 }
 
 variable "linked_clone" {
