@@ -51,7 +51,8 @@ variable "template" {
 
 variable "time_zone" {
   description = "The time zone to use"
-  type        = optional(string)
+  type        = string
+  nullable    = true
 }
 
 variable "linked_clone" {
