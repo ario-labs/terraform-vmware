@@ -15,7 +15,8 @@ variable "datastore" {
 
 variable "dns_server_list" {
   description = "The DNS servers to use"
-  type        = optional(list(string))
+  type        = list(string)
+  nullable    = true
 }
 
 variable "cluster" {
