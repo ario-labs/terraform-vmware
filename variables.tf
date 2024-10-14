@@ -16,16 +16,18 @@ variable "vsphere_server" {
 variable "virtual_machines" {
   description = "The list of virtual machines to create"
   type = map(object({
-    cluster        = string
-    datacenter     = string
-    datastore      = string
-    folder         = string
-    memory         = number
-    name           = string
-    network        = string
-    num_cpus       = number
-    template       = string
-    ipv4_with_cidr = string
+    cluster         = string
+    datacenter      = string
+    datastore       = string
+    dns_server_list = optional(list(string))
+    folder          = string
+    ipv4_with_cidr  = string
+    memory          = number
+    name            = string
+    network         = string
+    num_cpus        = number
+    template        = string
+    time_zone       = optional(string)
   }))
   default = {}
 }
