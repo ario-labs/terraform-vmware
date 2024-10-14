@@ -1,0 +1,16 @@
+{
+  "archives": {
+    "darwin_arm64": {
+      "hashes": [
+        "h1:spabvD1oCGE3AGBR37VXDjAxu/cQFmVp76SiIlTqxIY="
+      ],
+      "url": "terraform-provider-vsphere_2.8.1_darwin_arm64.zip"
+    },
+    "linux_amd64": {
+      "hashes": [
+        "h1:5gj92QAunvt4zTBNlysL9kHlhhixH/0Xb2baziS0aoA="
+      ],
+      "url": "terraform-provider-vsphere_2.8.1_linux_amd64.zip"
+    }
+  }
+}
