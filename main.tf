@@ -18,14 +18,16 @@ module "virtual-machine" {
     vsphere = vsphere
   }
 
-  name           = each.value.name
-  cluster        = each.value.cluster
-  datastore      = each.value.datastore
-  datacenter     = each.value.datacenter
-  network        = each.value.network
-  num_cpus       = each.value.num_cpus
-  memory         = each.value.memory
-  folder         = each.value.folder
-  template       = each.value.template
-  ipv4_with_cidr = each.value.ipv4_with_cidr
+  cluster         = each.value.cluster
+  datacenter      = each.value.datacenter
+  datastore       = each.value.datastore
+  dns_server_list = each.value.dns_server_list
+  folder          = each.value.folder
+  ipv4_with_cidr  = each.value.ipv4_with_cidr
+  memory          = each.value.memory
+  name            = each.value.name
+  network         = each.value.network
+  num_cpus        = each.value.num_cpus
+  template        = each.value.template
+  time_zone       = each.value.time_zone
 }
