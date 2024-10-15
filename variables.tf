@@ -22,6 +22,7 @@ variable "virtual_machines" {
     dns_server_list = optional(list(string))
     folder          = string
     ipv4_with_cidr  = string
+    linked_clone    = optional(bool)
     memory          = number
     name            = string
     network         = string

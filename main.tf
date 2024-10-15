@@ -24,6 +24,7 @@ module "virtual-machine" {
   dns_server_list = each.value.dns_server_list
   folder          = each.value.folder
   ipv4_with_cidr  = each.value.ipv4_with_cidr
+  linked_clone    = each.value.linked_clone
   memory          = each.value.memory
   name            = each.value.name
   network         = each.value.network
