@@ -32,14 +32,17 @@ locals {
 }
 
 resource "vsphere_virtual_machine" "vm" {
-  name             = var.name
-  datastore_id     = data.vsphere_datastore.datastore.id
-  guest_id         = data.vsphere_virtual_machine.template.guest_id
-  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
-  num_cpus         = var.num_cpus
-  memory           = var.memory
-  folder           = var.folder
-  firmware         = "efi"
+  name                   = var.name
+  datastore_id           = data.vsphere_datastore.datastore.id
+  guest_id               = data.vsphere_virtual_machine.template.guest_id
+  resource_pool_id       = data.vsphere_compute_cluster.cluster.resource_pool_id
+  num_cpus               = var.num_cpus
+  cpu_hot_add_enabled    = true
+  cpu_hot_remove_enabled = true
+  memory                 = var.memory
+  memory_hot_add_enabled = true
+  folder                 = var.folder
+  firmware               = "efi"
   lifecycle {
     ignore_changes = [hv_mode, ept_rvi_mode]
   }
