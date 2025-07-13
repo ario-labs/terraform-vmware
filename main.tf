@@ -21,6 +21,7 @@ module "virtual-machine" {
   cluster         = each.value.cluster
   datacenter      = each.value.datacenter
   datastore       = each.value.datastore
+  disk_size       = each.value.disk_size
   dns_server_list = each.value.dns_server_list
   folder          = each.value.folder
   ipv4_with_cidr  = each.value.ipv4_with_cidr

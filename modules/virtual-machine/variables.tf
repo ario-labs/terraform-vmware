@@ -66,3 +66,9 @@ variable "ipv4_with_cidr" {
   type        = string
   default     = null
 }
+
+variable "disk_size" {
+  description = "The size of the disk in GB. If not provided, uses template disk size."
+  type        = number
+  default     = null
+}
