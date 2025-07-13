@@ -19,6 +19,7 @@ variable "virtual_machines" {
     cluster         = string
     datacenter      = string
     datastore       = string
+    disk_size       = optional(number)
     dns_server_list = optional(list(string))
     folder          = string
     ipv4_with_cidr  = string
