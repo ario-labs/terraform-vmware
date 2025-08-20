@@ -16,7 +16,7 @@ variable "vsphere_server" {
 variable "virtual_machines" {
   description = "The list of virtual machines to create"
   type = map(object({
-    cluster         = string
+    resource_pool   = string
     datacenter      = string
     datastore       = string
     disk_size       = optional(number)

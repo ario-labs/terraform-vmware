@@ -18,7 +18,7 @@ module "virtual-machine" {
     vsphere = vsphere
   }
 
-  cluster         = each.value.cluster
+  resource_pool   = each.value.resource_pool
   datacenter      = each.value.datacenter
   datastore       = each.value.datastore
   disk_size       = each.value.disk_size

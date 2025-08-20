@@ -19,8 +19,8 @@ variable "dns_server_list" {
   default     = []
 }
 
-variable "cluster" {
-  description = "The cluster to use"
+variable "resource_pool" {
+  description = "The resource pool to use"
   type        = string
 }
 
