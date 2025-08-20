@@ -35,7 +35,7 @@ resource "vsphere_virtual_machine" "vm" {
   name                   = var.name
   datastore_id           = data.vsphere_datastore.datastore.id
   guest_id               = data.vsphere_virtual_machine.template.guest_id
-  resource_pool_id       = data.vsphere_resource_pool.pool.id
+  resource_pool_id       = data.vsphere_resource_pool.resource_pool.id
   num_cpus               = var.num_cpus
   cpu_hot_add_enabled    = true
   cpu_hot_remove_enabled = true
